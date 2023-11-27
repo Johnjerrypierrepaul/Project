@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\API\formlogController;
-use App\Http\Controllers\API\FormconnectionController;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\CrudController;
+use App\Http\Controllers\API\formlogController;
+use App\Http\Controllers\API\FormconnectionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::apiResource("formlogs",formlogController::class);
 Route::apiResource("Formconnection",FormconnectionController::class);
+Route::apiResource("cruds",CrudController::class);

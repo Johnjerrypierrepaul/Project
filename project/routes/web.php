@@ -1,5 +1,6 @@
 <?php
-
+use Illuminate\http\Request;
+use App\Models\Crud;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,9 @@ Route::get('/', function () {
 /*Route::get('/inscription', function () {
     return view('inscription');
 });*/
+Route::post('/ciar_plano', function (Request $informacoes) {
+    Crud::create([
+        'm-nome'=>$informacoes->m_nome,
+    ]);
+});
+
