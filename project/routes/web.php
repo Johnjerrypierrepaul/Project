@@ -2,6 +2,8 @@
 use Illuminate\http\Request;
 use App\Models\Crud;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +27,6 @@ Route::post('/ciar_plano', function (Request $informacoes) {
         'm-nome'=>$informacoes->m_nome,
     ]);
 });
+Route::resource('students', StudentController::class);
+
 
